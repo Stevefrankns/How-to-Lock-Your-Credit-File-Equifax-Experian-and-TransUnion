@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- Replace YOUR-DOMAIN.com before launch -->
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How to Lock Your Credit File — Equifax, Experian, and TransUnion</title>
+<meta content="Learn how to lock your credit file at Experian, Equifax, and TransUnion. Understand the difference between a credit lock and a credit freeze to protect your data." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+    --color-bg:              #0D1117;
+    --color-surface:         #161B22;
+    --color-surface-2:       #0F1620;
+    --color-panel:           #111820;
+    --color-primary-accent:  #3FB950;
+    --color-secondary-accent:#58A6FF;
+    --color-warning-accent:  #F0883E;
+    --color-danger:          #F85149;
+    --color-border:          #30363D;
+    --color-body-text:       #C9D1D9;
+    --color-heading-text:    #F0F6FC;
+    --color-muted-text:      #8B949E;
+    --color-terminal-black:  #05080D;
+    --font-heading:          'JetBrains Mono', monospace;
+    --font-body:             'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-code:             'JetBrains Mono', monospace;
+    --max-reading-width:     780px;
+    --max-wide-width:        1180px;
+    --section-padding-v:     78px;
+    --radius-card:           18px;
+    --shadow-card:           0 28px 80px rgba(0, 0, 0, 0.34);
+    --transition-speed:      0.22s;
+}
+
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--color-bg); }
+body {
+    font-family: var(--font-body);
+    background:
+        radial-gradient(circle at 18% 0%, rgba(63,185,80,0.10), transparent 30rem),
+        radial-gradient(circle at 92% 16%, rgba(88,166,255,0.11), transparent 28rem),
+        linear-gradient(180deg, #0D1117 0%, #0B1017 100%);
+    color: var(--color-body-text);
+    line-height: 1.74;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(201,209,217,0.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,209,217,0.6) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+h1, h2, h3, h4, .nav-logo, .toc-title, .btn, .label, .method-badge {
+    font-family: var(--font-heading);
+    color: var(--color-heading-text);
+    line-height: 1.18;
+}
+h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+}
+h2 {
+    font-size: clamp(25px, 4vw, 38px);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h3 {
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+h4 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin-bottom: .65rem;
+}
+p { margin-bottom: 1.5rem; }
+a { color: var(--color-secondary-accent); text-decoration: none; transition: color var(--transition-speed), opacity var(--transition-speed), border-color var(--transition-speed), background var(--transition-speed), transform var(--transition-speed); }
+a:hover { color: var(--color-primary-accent); }
+img, svg { max-width: 100%; display: block; }
+strong { color: #F0F6FC; font-weight: 700; }
+ul, ol { padding-left: 1.15rem; }
+li { margin-bottom: .55rem; }
+
+.container { max-width: var(--max-reading-width); margin: 0 auto; padding: 0 24px; }
+.container-wide { max-width: var(--max-wide-width); margin: 0 auto; padding: 0 24px; }
+
+section { position: relative; padding: var(--section-padding-v) 0; }
+.bg-alt {
+    background:
+        linear-gradient(180deg, rgba(22,27,34,0.96), rgba(13,17,23,0.96)),
+        radial-gradient(circle at 100% 0, rgba(88,166,255,0.11), transparent 30rem);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 17, 23, 0.88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--color-border);
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--color-heading-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(63,185,80,.45);
+    border-radius: 12px;
+    background: radial-gradient(circle at 30% 20%, rgba(63,185,80,.22), transparent 45%), #0B1219;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.03), 0 0 24px rgba(63,185,80,.12);
+}
+.brand-text { display: inline-flex; align-items: center; gap: .55ch; padding-top: 1px; }
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+.nav-links a {
+    font-family: var(--font-code);
+    font-weight: 500;
+    font-size: .92rem;
+    color: var(--color-muted-text);
+}
+.nav-links a::before { content: "./"; color: var(--color-primary-accent); margin-right: 2px; }
+.nav-links a:hover { color: var(--color-heading-text); }
+.nav-cta {
+    font-family: var(--font-code);
+    font-weight: 700;
+    padding: 9px 16px;
+    border: 1px solid rgba(63,185,80,.58);
+    border-radius: 10px;
+    font-size: .86rem;
+    color: var(--color-primary-accent);
+    background: rgba(63,185,80,.08);
+}
+.nav-cta:hover {
+    background: var(--color-primary-accent);
+    color: #08110B;
+    transform: translateY(-1px);
+}
+.hamburger {
+    display: none;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--color-heading-text);
+    padding: 6px 10px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: .92rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .065em;
+    cursor: pointer;
+}
+.btn-outline {
+    border: 1px solid var(--color-primary-accent);
+    color: var(--color-primary-accent);
+    background: transparent;
+}
+.btn-outline:hover {
+    background: rgba(63,185,80,.12);
+    color: var(--color-heading-text);
+}
+.btn-filled {
+    background: var(--color-primary-accent);
+    color: #071109;
+    border: 1px solid var(--color-primary-accent);
+}
+.btn-filled:hover { background: transparent; color: var(--color-primary-accent); }
+
+/* TERMINAL / HERO */
+.hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 14% 12%, rgba(63,185,80,.16), transparent 34rem),
+        radial-gradient(circle at 90% 5%, rgba(88,166,255,.14), transparent 28rem),
+        linear-gradient(180deg, #0D1117 0%, #0A0E14 100%);
+    padding-top: 92px;
+    padding-bottom: 72px;
+    border-bottom: 1px solid var(--color-border);
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr);
+    gap: 48px;
+    align-items: center;
+}
+.hero-copy { min-width: 0; }
+.terminal-green { color: var(--color-primary-accent); text-shadow: 0 0 22px rgba(63,185,80,.25); }
+.breadcrumb {
+    font-size: .78rem;
+    color: var(--color-muted-text);
+    margin-bottom: 24px;
+    font-family: var(--font-code);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+.meta-bar {
+    font-family: var(--font-code);
+    font-size: .82rem;
+    color: var(--color-muted-text);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 13px 0;
+    margin: 30px 0;
+}
+.quick-answer,
+.toc-card,
+.toggle-container,
+.quiz-box,
+.pro-box,
+.con-box,
+.test-card,
+.faq-item,
+.comp-table-wrapper {
+    background: linear-gradient(180deg, rgba(22,27,34,.96), rgba(13,17,23,.96));
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+.quick-answer {
+    border-left: 4px solid var(--color-primary-accent);
+    padding: 24px;
+    margin: 32px 0 0;
+}
+.label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    color: var(--color-primary-accent);
+    margin-bottom: 12px;
+}
+.label::before {
+    content: "$";
+    color: var(--color-secondary-accent);
+}
+.hero-trust {
+    margin-top: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-code);
+    color: var(--color-muted-text);
+    border: 1px solid var(--color-border);
+    background: rgba(22,27,34,.62);
+    border-radius: 999px;
+    padding: 10px 14px;
+}
+.hero-trust strong {
+    color: var(--color-primary-accent);
+    min-width: 92px;
+    text-align: right;
+}
+.hero-terminal-shell,
+.terminal-output-section,
+.saas-mockup {
+    position: relative;
+    background: #05080D;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card), 0 0 0 1px rgba(63,185,80,.08);
+    overflow: hidden;
+}
+.terminal-titlebar {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--color-border);
+    background: linear-gradient(180deg, #161B22, #0D1117);
+    font-family: var(--font-code);
+    color: var(--color-muted-text);
+    font-size: .78rem;
+}
+.terminal-dots { display: inline-flex; align-items: center; gap: 7px; margin-right: 9px; }
+.terminal-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.terminal-dot.red { background: #FF5F56; }
+.terminal-dot.yellow { background: #FFBD2E; }
+.terminal-dot.green { background: #27C93F; }
+.hero-terminal-body {
+    padding: 24px;
+    min-height: 360px;
+    font-family: var(--font-code);
+    font-size: .94rem;
+    color: var(--color-body-text);
+}
+.terminal-line { display: block; margin-bottom: 12px; }
+.terminal-prompt { color: var(--color-primary-accent); }
+.terminal-comment { color: var(--color-muted-text); }
+.terminal-blue { color: var(--color-secondary-accent); }
+.terminal-warning { color: var(--color-warning-accent); }
+#typing-terminal {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 0;
+    font-family: var(--font-code);
+}
+.blinking-cursor {
+    display: inline-block;
+    width: 9px;
+    height: 1.1em;
+    background: var(--color-primary-accent);
+    margin-left: 4px;
+    vertical-align: -2px;
+    animation: cursorBlink 1s steps(2, start) infinite;
+}
+@keyframes cursorBlink { 50% { opacity: 0; } }
+
+/* MEDIA */
+.media-card,
+.media-strip {
+    margin: 34px 0;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    background:
+        linear-gradient(180deg, rgba(22,27,34,.92), rgba(13,17,23,.92));
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+.media-card img,
+.media-strip img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #0B1117;
+}
+.media-card.inline { max-width: 100%; }
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 34px 0;
+}
+.media-grid.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.media-grid .media-card { margin: 0; }
+
+/* TOC */
+.toc-card {
+    padding: 32px;
+    margin-bottom: 48px;
+}
+.toc-card ul {
+    list-style: none;
+    margin-top: 16px;
+    padding-left: 0;
+}
+.toc-card li { margin-bottom: 12px; }
+.toc-card a {
+    font-family: var(--font-code);
+    font-size: .97rem;
+    color: var(--color-body-text);
+    border-bottom: 1px solid transparent;
+}
+.toc-card a:hover {
+    color: var(--color-primary-accent);
+    border-bottom-color: rgba(63,185,80,.55);
+}
+
+/* TOGGLE */
+.toggle-container { margin: 40px 0; overflow: hidden; }
+.toggle-header {
+    display: flex;
+    background: #0D1117;
+    border-bottom: 1px solid var(--color-border);
+}
+.toggle-btn {
+    flex: 1;
+    padding: 16px;
+    text-align: center;
+    font-family: var(--font-code);
+    font-size: .94rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--color-muted-text);
+    transition: all .2s;
+}
+.toggle-btn::before { content: "> "; color: var(--color-primary-accent); }
+.toggle-btn.active {
+    background: rgba(63,185,80,.08);
+    color: var(--color-primary-accent);
+    box-shadow: inset 0 -3px 0 var(--color-primary-accent);
+}
+.toggle-content { padding: 30px; display: none; }
+.toggle-content.active { display: block; animation: fadeIn .3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+/* METHODS / CLI STEPS */
+.method-block {
+    position: relative;
+    margin-bottom: 44px;
+    padding: 64px 28px 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(22,27,34,.98), rgba(13,17,23,.98));
+    box-shadow: var(--shadow-card);
+}
+.method-block::before {
+    content: "credit-bureau.sh";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    padding-left: 74px;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 20px 20px 0 0;
+    background:
+        radial-gradient(circle at 24px 50%, #FF5F56 0 5px, transparent 6px),
+        radial-gradient(circle at 42px 50%, #FFBD2E 0 5px, transparent 6px),
+        radial-gradient(circle at 60px 50%, #27C93F 0 5px, transparent 6px),
+        linear-gradient(180deg, #161B22, #0D1117);
+    color: var(--color-muted-text);
+    font: 400 .76rem var(--font-code);
+}
+.method-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(63,185,80,.08);
+    color: var(--color-primary-accent);
+    border: 1px solid rgba(63,185,80,.3);
+    padding: 6px 11px;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.method-badge::after {
+    content: " ████████░░ MEDIUM";
+    display: inline-block;
+    overflow: hidden;
+    max-width: 0;
+    white-space: nowrap;
+    color: var(--color-muted-text);
+    animation: terminalBadge 1.8s ease forwards;
+}
+@keyframes terminalBadge { to { max-width: 180px; } }
+.pro-con-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.pro-box, .con-box { padding: 24px; }
+.pro-box { border-color: rgba(63,185,80,.3); }
+.con-box { border-color: rgba(248,81,73,.3); }
+.pro-box ul, .con-box ul { list-style: none; margin-top: 12px; padding-left: 0; }
+.pro-box li::before { content: '✓'; color: var(--color-primary-accent); margin-right: 8px; font-weight: bold; }
+.con-box li::before { content: '✕'; color: var(--color-danger); margin-right: 8px; font-weight: bold; }
+.pro-box strong, .con-box strong { font-family: var(--font-code); color: var(--color-heading-text); }
+.pro-box strong::before, .con-box strong::before,
+.timeline-item h4::before {
+    content: "# ";
+    color: var(--color-primary-accent);
+}
+.timeline {
+    position: relative;
+    padding-left: 0;
+    margin: 40px 0;
+    list-style: none;
+    counter-reset: cli-step;
+}
+.timeline::before { display: none; }
+.timeline-item {
+    position: relative;
+    margin-bottom: 18px;
+    padding: 18px 18px 18px 52px;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    background: rgba(5,8,13,.45);
+    counter-increment: cli-step;
+}
+.timeline-item::before {
+    content: "> " counter(cli-step, decimal-leading-zero);
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    font-family: var(--font-code);
+    color: var(--color-primary-accent);
+    background: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+/* SAAS MOMENT */
+.saas-moment {
+    background:
+        radial-gradient(circle at 18% 12%, rgba(63,185,80,.18), transparent 30rem),
+        linear-gradient(180deg, #05080D, #0D1117);
+    color: var(--color-body-text);
+    padding: 100px 0;
+    overflow: hidden;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+.saas-moment h2 { color: var(--color-heading-text); font-size: clamp(28px, 4vw, 44px); }
+.saas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.saas-content p { color: var(--color-body-text); font-size: 1.02rem; }
+.saas-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; margin-bottom: 32px; }
+.chip {
+    background: rgba(63,185,80,.08);
+    border: 1px solid rgba(63,185,80,.3);
+    color: var(--color-body-text);
+    padding: 7px 13px;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-family: var(--font-code);
+}
+.chip::before { content: "✓ "; color: var(--color-primary-accent); }
+.btn-saas-filled { background: var(--color-primary-accent); color: #071109; border-color: var(--color-primary-accent); }
+.btn-saas-filled:hover { background: transparent; color: var(--color-primary-accent); }
+.btn-saas-outline { border-color: rgba(63,185,80,.65); color: var(--color-primary-accent); background: transparent; }
+.btn-saas-outline:hover { border-color: var(--color-primary-accent); background: rgba(63,185,80,.09); }
+.saas-mockup { padding: 0; }
+.saas-mockup::before { display: none; }
+.saas-product-visual { padding: 18px; }
+.saas-product-visual img { width: 100%; height: auto; object-fit: contain; border-radius: 14px; background: #0B1117; }
+.mockup-line { height: 12px; background: rgba(63,185,80,.24); border-radius: 6px; margin-bottom: 16px; width: 80%; }
+.mockup-line.short { width: 60%; }
+
+/* TERMINAL OUTPUT */
+.terminal-output-section {
+    margin: 0 auto;
+    max-width: var(--max-wide-width);
+}
+.terminal-output-body {
+    padding: 26px;
+    font-family: var(--font-code);
+    font-size: .94rem;
+    color: var(--color-primary-accent);
+}
+.terminal-output-body span {
+    display: block;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: terminalLineIn .55s ease forwards;
+}
+.terminal-output-body span:nth-child(1) { animation-delay: .15s; }
+.terminal-output-body span:nth-child(2) { animation-delay: .65s; }
+.terminal-output-body span:nth-child(3) { animation-delay: 1.15s; }
+.terminal-output-body span:nth-child(4) { animation-delay: 1.65s; }
+.terminal-output-body span:nth-child(5) { animation-delay: 2.15s; }
+.terminal-output-body span:nth-child(6) { animation-delay: 2.65s; }
+@keyframes terminalLineIn { to { opacity: 1; transform: translateY(0); } }
+
+/* COMPARISON TABLE */
+.comp-table-wrapper { overflow-x: auto; margin: 40px 0; }
+.comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    background: transparent;
+    text-align: left;
+    font-family: var(--font-code);
+}
+.comp-table th, .comp-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+.comp-table th {
+    font-family: var(--font-code);
+    font-weight: 700;
+    background: rgba(63,185,80,.08);
+    color: var(--color-primary-accent);
+    font-size: .88rem;
+}
+.comp-table tr:nth-child(even) { background: rgba(255,255,255,.02); }
+.comp-table .verdict-row td { background: rgba(63,185,80,.08); font-weight: 700; }
+.status-yes::before { content: "✓ "; color: var(--color-primary-accent); }
+.status-no::before { content: "✕ "; color: var(--color-danger); }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: 250px 1fr; gap: 48px; }
+.faq-sidebar { position: sticky; top: 100px; }
+.faq-sidebar h3 { margin-top: 0; }
+.faq-item {
+    display: block;
+    margin-bottom: 18px;
+    padding: 0;
+    overflow: hidden;
+}
+.faq-item summary {
+    cursor: pointer;
+    padding: 20px 24px;
+    list-style: none;
+    border-bottom: 1px solid var(--color-border);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h4 {
+    display: inline;
+    margin: 0;
+}
+.faq-item summary h4::before {
+    content: "$ ";
+    color: var(--color-primary-accent);
+}
+.faq-item summary::after {
+    content: "+";
+    float: right;
+    color: var(--color-secondary-accent);
+    font-family: var(--font-code);
+}
+.faq-item[open] summary::after { content: "−"; color: var(--color-primary-accent); }
+.faq-item p {
+    padding: 22px 24px 24px;
+    margin: 0;
+    color: var(--color-body-text);
+}
+
+/* TESTIMONIALS */
+.test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 40px 0; }
+.test-card {
+    border-left: 4px solid var(--color-primary-accent);
+    padding: 32px;
+}
+.test-quote { font-style: italic; font-size: 1.06rem; margin-bottom: 16px; }
+.test-author { font-family: var(--font-code); font-weight: 700; font-size: .82rem; color: var(--color-muted-text); text-transform: uppercase; }
+
+/* QUIZ */
+.quiz-box { padding: 40px; text-align: center; margin: 48px 0; }
+.quiz-options { display: flex; gap: 16px; justify-content: center; margin-top: 24px; flex-wrap: wrap; }
+.quiz-btn {
+    padding: 12px 20px;
+    border: 1px solid var(--color-border);
+    background: #0D1117;
+    color: var(--color-body-text);
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--font-code);
+    font-size: .9rem;
+    transition: all .2s;
+}
+.quiz-btn:hover, .quiz-btn.selected {
+    background: rgba(63,185,80,.12);
+    color: var(--color-primary-accent);
+    border-color: rgba(63,185,80,.55);
+}
+.quiz-result {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(63,185,80,.08);
+    border: 1px solid rgba(63,185,80,.3);
+    border-radius: var(--radius-card);
+    display: none;
+}
+
+/* SCROLL LOADING HEADER */
+.terminal-header-loading {
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin: 12px 0 22px;
+    border-radius: 999px;
+    background: rgba(63,185,80,.08);
+    overflow: hidden;
+}
+.terminal-header-loading::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-primary-accent), var(--color-secondary-accent));
+}
+.terminal-header-loading.is-loading::before {
+    animation: headerLoad 1.05s ease forwards;
+}
+.terminal-header-loading.is-done { opacity: 0; transform: translateY(-4px); transition: opacity .35s ease, transform .35s ease; }
+@keyframes headerLoad { to { width: 100%; } }
+
+/* BRACKET HOVER */
+@media (hover:hover) and (pointer:fine) {
+    .pro-box strong,
+    .con-box strong,
+    .toc-card a,
+    .test-card .test-author,
+    .faq-item summary h4 {
+        position: relative;
+    }
+    .pro-box:hover strong::after,
+    .con-box:hover strong::after,
+    .test-card:hover .test-author::after,
+    .faq-item:hover summary h4::after {
+        content: " ]";
+        color: var(--color-primary-accent);
+    }
+    .pro-box:hover strong::before,
+    .con-box:hover strong::before,
+    .test-card:hover .test-author::before,
+    .faq-item:hover summary h4::before {
+        content: "[ ";
+        color: var(--color-primary-accent);
+    }
+}
+
+/* FOOTER */
+footer {
+    background: #05080D;
+    color: var(--color-muted-text);
+    padding: 68px 0 34px;
+    font-size: .92rem;
+    border-top: 1px solid var(--color-border);
+}
+.footer-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+footer h4 { color: var(--color-heading-text); font-family: var(--font-code); margin-bottom: 24px; font-size: 1rem; }
+footer h4::before { content: "./"; color: var(--color-primary-accent); }
+footer ul { list-style: none; padding-left: 0; }
+footer li { margin-bottom: 12px; }
+footer a { color: var(--color-muted-text); }
+footer a:hover { color: var(--color-primary-accent); }
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 24px;
+    text-align: center;
+    font-family: var(--font-code);
+}
+
+/* UTILITIES */
+a[target="_blank"]::after {
+    content: "↗";
+    font-size: .72em;
+    margin-left: .22em;
+    opacity: .72;
+}
+.terminal-note {
+    font-family: var(--font-code);
+    color: var(--color-muted-text);
+    font-size: .86rem;
+}
+.inline-terminal-panel {
+    border: 1px solid var(--color-border);
+    background: rgba(5,8,13,.58);
+    border-radius: 16px;
+    padding: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+    .hero-grid, .saas-grid, .pro-con-grid, .test-grid, .footer-grid, .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    .faq-sidebar { position: static; margin-bottom: 32px; }
+    .hero-terminal-body { min-height: 290px; }
+}
+@media (max-width: 768px) {
+    :root { --section-padding-v: 58px; }
+    body { font-size: 16px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; letter-spacing: 1.5px; }
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: block; }
+    .hero { padding-top: 70px; min-height: auto; }
+    .hero-grid { gap: 32px; }
+    .hero-terminal-body { font-size: .82rem; min-height: 250px; padding: 18px; }
+    .terminal-titlebar { font-size: .7rem; }
+    .media-grid, .media-grid.three { grid-template-columns: 1fr; }
+    .saas-moment { padding: 64px 0; }
+    .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container-wide header-inner">
+<a class="nav-logo" href="#"><span aria-hidden="true" class="brand-mark">
+<svg aria-hidden="true" focusable="false" height="26" role="img" viewbox="0 0 48 48" width="26">
+<path d="M24 4 39 10v11c0 10.7-6.1 18.2-15 23C15.1 39.2 9 31.7 9 21V10L24 4Z" fill="none" stroke="#3FB950" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M17 25l4 4 10-11" fill="none" stroke="#58A6FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</span><span class="brand-text"><span>Credit</span><span>Lock</span><span>Guide</span></span></a>
+<nav class="nav-links">
+<a href="#guide">Guide</a>
+<a href="#methods">Bureaus</a>
+<a href="#local-files">Local Security</a>
+<a href="#faq">FAQ</a>
+</nav>
+<a class="btn btn-outline nav-cta" href="#recommendation">See Our Top Pick →</a>
+<button aria-label="Open Menu" class="hamburger">☰</button>
+</div>
+</header>
+<!-- S1: HERO -->
+<section class="hero"><div class="container-wide hero-grid"><div class="hero-copy">
+<div class="breadcrumb">Privacy &amp; Security Guides  /  Credit Protection</div>
+<h1>How to Lock Your <span class="terminal-green">Credit File</span> — Equifax, Experian, and TransUnion</h1>
+<p>If your social security number, address, or financial details have been exposed in a data breach, <a href="https://selfgrowth.com/identity_theft.html" rel="noopener noreferrer" target="_blank">identity thieves</a> can open accounts in your name. Learning how to lock your credit file is the single most effective way to stop them instantly.</p>
+<div class="meta-bar">
+                Editorial Team  ·  Updated May 2026  ·  12 min read
+            </div>
+<div class="quick-answer">
+<span class="label">Quick Answer</span>
+<p>To fully secure your financial identity, you must lock your credit file at <strong>all three major bureaus separately</strong>. You can lock your Experian credit file via their app, lock Equifax through their online portal, and lock TransUnion using their TrueIdentity service. Once locked, lenders cannot view your reports, effectively blocking anyone from opening new credit cards or loans in your name.</p>
+</div>
+<div aria-live="polite" class="hero-trust">protected_files=<strong id="files-protected-counter">128,400</strong> files protected</div></div><div aria-label="Simulated terminal protection process" class="hero-terminal-shell">
+<div class="terminal-titlebar">
+<span class="terminal-dots"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></span>
+                secure-credit-report — zsh
+            </div>
+<div class="hero-terminal-body">
+<span class="terminal-line terminal-comment"># live protection console</span>
+<pre id="typing-terminal"></pre><span aria-hidden="true" class="blinking-cursor"></span>
+<span class="terminal-line terminal-comment" style="margin-top:24px;"># vault status</span>
+<span class="terminal-line"><span class="terminal-prompt">✓</span> 2024_Tax_Return.pdf <span class="terminal-blue">encrypted</span></span>
+<span class="terminal-line"><span class="terminal-prompt">✓</span> Equifax_Credit_Report.pdf <span class="terminal-blue">encrypted</span></span>
+<span class="terminal-line"><span class="terminal-prompt">✓</span> TransUnion_PIN.txt <span class="terminal-warning">secured</span></span>
+</div>
+</div></div></section>
+<!-- S2: TABLE OF CONTENTS -->
+<section class="container" id="guide">
+<div class="toc-card">
+<h2 class="toc-title" style="margin-top:0;">In This Guide</h2>
+<ul>
+<li><a href="#understanding-locks">1. What is a Credit File Lock?</a></li>
+<li><a href="#lock-vs-freeze">2. Credit Lock vs. Credit Freeze</a></li>
+<li><a href="#methods">3. How to Lock Your Credit File at All 3 Bureaus</a></li>
+<li><a href="#recommendation">4. Why You Must Secure Downloaded Financial Files (Our Pick)</a></li>
+<li><a href="#pin-management">5. How to Safely Store Your Credit Bureau PINs</a></li>
+<li><a href="#related-tools">6. Related Security Tools</a></li>
+<li><a href="#faq">7. Frequently Asked Questions</a></li>
+</ul>
+</div>
+</section>
+<!-- S3: DIRECT ANSWER / OVERVIEW (with SEED E: Interactive Toggle) -->
+<section class="container" id="understanding-locks">
+<span class="label">The Basics</span>
+<h2>Why How to Lock Your Credit File Matters More Than Ever in 2025</h2>
+<p>A credit file lock explicitly revokes access to your credit reports. When you apply for a loan, a mortgage, or a new credit card, the lender checks your file at Equifax, Experian, or TransUnion. If the file is locked, the inquiry is blocked, and the application is automatically denied.</p>
+<p>Because <a href="https://techblog.kozminski.edu.pl/2024/12/12/digital-privacy-and-data-mining-personalization-vs-exploitation/" rel="noopener noreferrer" target="_blank">data brokers</a> continuously collect and monetize personal data, the chances of your information appearing on the dark web are incredibly high. A credit lock acts as a digital deadbolt against the fallout of these corporate data breaches.</p><figure class="media-card"><img alt="Sensitive personal data protected against identity theft and credit fraud" loading="lazy" src="https://i.ibb.co/Zpt5NfpT/sensitive-personal-data.jpg"/></figure>
+<span aria-hidden="true" id="lock-vs-freeze" style="position:absolute;"></span><h3>Interactive: Credit Lock vs Credit Freeze explainer</h3>
+<p>People often search for "experian credit file lock vs freeze" or "credit file lock vs freeze". While they accomplish the same goal—blocking lenders from viewing your report—they differ in legal protections and convenience.</p>
+<!-- SIGNATURE DETAIL: Interactive Toggle -->
+<div class="toggle-container">
+<div class="toggle-header">
+<button class="toggle-btn active" onclick="switchToggle(0)">Credit Lock</button>
+<button class="toggle-btn" onclick="switchToggle(1)">Credit Freeze</button>
+</div>
+<div class="toggle-content active" id="toggle-0">
+<h4>The Convenience Option</h4>
+<p>A <strong>Credit Lock</strong> is a product offered by the credit bureaus. It is often tied to an app, allowing you to lock and unlock your credit file instantly with a single tap or swipe. Some bureaus offer this for free (like TransUnion's TrueIdentity), while others bundle it into premium monthly subscriptions.</p>
+<ul>
+<li><strong>Speed:</strong> Instant unlock via smartphone app.</li>
+<li><strong>Cost:</strong> Can incur monthly fees depending on the bureau.</li>
+<li><strong>Legal Backing:</strong> Governed by the terms of service of the bureau; lacks federal guarantee against financial loss if the lock fails.</li>
+</ul>
+</div>
+<div class="toggle-content" id="toggle-1">
+<h4>The Federal Standard</h4>
+<p>A <strong>Credit Freeze</strong> (or Security Freeze) is a federally mandated right. By law, it is completely free to place and lift at all three major bureaus. It provides stronger legal protections in the event of fraud.</p>
+<ul>
+<li><strong>Speed:</strong> May take up to 24-48 hours to lift, though many online requests process within an hour.</li>
+<li><strong>Cost:</strong> 100% Free by federal law.</li>
+<li><strong>Legal Backing:</strong> Guaranteed by federal law. If someone fraudulently opens an account while a freeze is active, you are legally protected from liability.</li>
+</ul>
+</div>
+</div><figure class="media-card"><img alt="Locked file cabinet illustration representing credit file lock and freeze protection" loading="lazy" src="https://i.ibb.co/MxK9KKXh/file-cabinet-lock.jpg"/></figure>
+</section>
+<!-- S4: COMPLETE METHODS AND SOLUTIONS GUIDE (Bureaus) -->
+<section class="bg-alt" id="methods">
+<div class="container">
+<span class="label">Step-by-Step</span>
+<h2>How to Lock Your Credit File at All 3 Bureaus</h2>
+<p>Remember: Experian, Equifax, and TransUnion do not communicate with each other regarding locks. You must perform this action at <strong>all three</strong> individually to be fully protected.</p><figure class="media-card"><img alt="Account privacy lock illustration for securing credit bureau access" loading="lazy" src="https://i.ibb.co/C3dZb4Cy/account-privacy-lock-illustration.png"/></figure>
+<div class="method-block">
+<span class="method-badge">Bureau 1</span>
+<h3>How to lock my Experian credit file</h3>
+<p>Many users ask "how to lock my experian credit file for free". Experian heavily promotes its paid "CreditLock" service (part of Experian Premium). However, you can achieve the exact same security by requesting a free Credit Freeze.</p>
+<ol class="timeline">
+<li class="timeline-item"><h4>Create an Account</h4> Go to the Experian Freeze Center online and create a free account.</li>
+<li class="timeline-item"><h4>Provide Verification</h4> Enter your SSN, address history, and date of birth.</li>
+<li class="timeline-item"><h4>Toggle the Freeze</h4> Select "Freeze my credit" and save your PIN (crucial for unlocking later).</li>
+</ol>
+<div class="pro-con-grid">
+<div class="pro-box">
+<strong>Pros of Experian</strong>
+<ul>
+<li>Easy-to-use web interface</li>
+<li>Instant email confirmation</li>
+</ul>
+</div>
+<div class="con-box">
+<strong>Limitations</strong>
+<ul>
+<li>Constant upselling to paid locks</li>
+<li>App interface pushes paid tiers</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="method-block">
+<span class="method-badge">Bureau 2</span>
+<h3>Lock TransUnion credit file</h3>
+<p>TransUnion offers "TrueIdentity," which acts as a free credit lock. Alternatively, you can use their standard Freeze service.</p>
+<ol class="timeline">
+<li class="timeline-item"><h4>Visit TransUnion</h4> Navigate to the TransUnion Credit Freeze page.</li>
+<li class="timeline-item"><h4>Register</h4> Create your login credentials.</li>
+<li class="timeline-item"><h4>Secure</h4> Click "Add Freeze" and wait for the status to change to Protected.</li>
+</ol>
+</div>
+<div class="method-block">
+<span class="method-badge">Bureau 3</span>
+<h3>Lock Equifax credit file</h3>
+<p>Equifax provides a free lock through their "Lock &amp; Alert" service, which is a dedicated app, or you can place a statutory freeze via their website.</p>
+</div><figure class="media-card"><img alt="Secure login screen showing protection for sensitive identity verification" loading="lazy" src="https://i.ibb.co/xtZC7X09/lock-screen-security.jpg"/></figure>
+</div>
+</section>
+<!-- S6: INTERACTIVE QUIZ -->
+<section class="container">
+<div class="quiz-box">
+<h3>Personal Data Risk Score Calculator</h3>
+<p>Not sure if you need a lock or a freeze? Answer this quick question to find out.</p><figure class="media-card inline"><img alt="Security shield protecting personal credit and financial data" loading="lazy" src="https://i.ibb.co/bjywWFhL/security-shield-protecting.jpg"/></figure>
+<p><strong>How often do you apply for new credit (loans, cards, mortgages)?</strong></p>
+<div class="quiz-options">
+<button class="quiz-btn" onclick="showQuizResult('high')">Once a year or less</button>
+<button class="quiz-btn" onclick="showQuizResult('med')">A few times a year</button>
+<button class="quiz-btn" onclick="showQuizResult('low')">I am currently house/car shopping</button>
+</div>
+<div class="quiz-result" id="quiz-result-box">
+<!-- Populated by JS -->
+</div>
+</div>
+</section>
+<!-- S5: PREMIUM SAAS MOMENT - LAYER 2 RECOMMENDATION -->
+<span aria-hidden="true" id="recommendation" style="position:absolute;"></span><section class="saas-moment" id="local-files">
+<div class="container-wide saas-grid">
+<div class="saas-content">
+<span class="label" style="color: #4CAF50;">The Missing Link in Financial Security</span>
+<h2>You Locked Your Credit. But What About Your Downloaded Files?</h2>
+<p>Locking your credit file at the bureaus protects you from new accounts being opened. But what happens to the <strong>tax returns, bank statements, and PDF credit reports</strong> you’ve downloaded to your PC?</p>
+<p>If your laptop is stolen, or malware infects your computer, your unlocked financial documents give hackers everything they need to bypass security questions or blackmail you. Of all the <a href="https://thectoclub.com/tools/best-encryption-software/" rel="noopener noreferrer" target="_blank">local encryption tools</a> we covered, here is why we recommend <strong>Folder Lock</strong> to secure your downloaded financial data.</p>
+<div class="saas-chips">
+<span class="chip">256-bit AES Encryption</span>
+<span class="chip">Secure Wallets for PINs</span>
+<span class="chip">File Shredder</span>
+<span class="chip">Cross-Platform Sync</span>
+</div>
+<div style="margin-top: 40px; display: flex; gap: 16px;">
+<a class="btn btn-saas-filled" href="https://www.newsoftwares.net/download/folderlock10-en/folderlock10-en.exe" rel="noopener noreferrer" target="_blank">Try Folder Lock Free →</a>
+<a class="btn btn-saas-outline" href="https://store.newsoftwares.net/?add=fl10" rel="noopener noreferrer" target="_blank">Get the Full Version →</a>
+</div>
+</div>
+<div class="saas-mockup">
+
+
+
+</div>
+</div>
+</section><section class="terminal-output-wrap">
+<div class="terminal-output-section">
+<div class="terminal-titlebar">
+<span class="terminal-dots"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></span>
+          protection-process.log
+        </div>
+<div aria-label="Simulated protection process" class="terminal-output-body">
+<span>$ scan ./financial-documents</span>
+<span>✓ detected: tax returns, bank statements, PDF credit reports</span>
+<span>$ encrypt --algorithm AES-256 --vault FolderLock</span>
+<span>✓ vault created and locked</span>
+<span>$ shred --source unsecured-downloads</span>
+<span>✓ protection process complete</span>
+</div>
+</div>
+</section>
+<!-- S10 / S12: DEEP DIVE & SOFTWARE CAPABILITIES -->
+<section class="container">
+<div class="pro-con-grid">
+<div>
+<h3>How Folder Lock Secures Financial Documents</h3>
+<p>When you pull your annual credit reports to verify your locks, saving those files on your desktop is a massive liability. Folder Lock solves this by creating an encrypted locker.</p><div class="media-grid three"><figure class="media-card"><img alt="Folder Lock 10 main screen for managing protected financial files" loading="lazy" src="https://i.ibb.co/ynCZTHt1/folder-lock-10-main-screen.png"/></figure><figure class="media-card"><img alt="Folder Lock protect folders screen for securing downloaded credit reports" loading="lazy" src="https://i.ibb.co/pj61MNWJ/folder-lock-10-screenshot-safeguard-protect-folders.png"/></figure><figure class="media-card"><img alt="Folder Lock file shredder screen for permanently removing financial documents" loading="lazy" src="https://i.ibb.co/Ndh0Qc8T/folder-lock-10-screenshot-safeguard-shred-files.png"/></figure></div>
+<ul class="timeline" style="margin-top: 24px;">
+<li class="timeline-item" style="margin-bottom: 20px;"><h4>Drag and Drop</h4> Move your sensitive PDFs into the Folder Lock interface.</li>
+<li class="timeline-item" style="margin-bottom: 20px;"><h4>Military-Grade Encryption</h4> The files are converted using AES-256 bit encryption instantly.</li>
+<li class="timeline-item"><h4>Lock and Hide</h4> The files vanish from your standard Windows explorer. They only appear when the master password is entered.</li>
+</ul>
+</div>
+<div style="background: var(--color-hero-bg); padding: 32px; border-radius: var(--radius-card);">
+<h3 style="margin-top:0;">Free vs Paid Version</h3>
+<p>Folder Lock offers a robust free trial allowing you to test the core locking mechanism on your financial documents.</p>
+<table style="width:100%; margin-top: 16px; border-collapse: collapse; text-align: left;">
+<tr style="border-bottom: 1px solid var(--color-border);">
+<th style="padding: 12px 0;">Feature</th>
+<th>Free Trial</th>
+<th>Full Version</th>
+</tr>
+<tr style="border-bottom: 1px solid var(--color-border);">
+<td style="padding: 12px 0;">Folder Locking</td>
+<td class="status-yes">Yes</td>
+<td class="status-yes">Yes</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--color-border);">
+<td style="padding: 12px 0;">AES-256 Encryption</td>
+<td class="status-yes">Yes</td>
+<td class="status-yes">Yes</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--color-border);">
+<td style="padding: 12px 0;">Secure Digital Wallets</td>
+<td class="status-no">No</td>
+<td class="status-yes">Yes</td>
+</tr>
+<tr style="border-bottom: 1px solid var(--color-border);">
+<td style="padding: 12px 0;">Military-Grade File Shredding</td>
+<td class="status-no">No</td>
+<td class="status-yes">Yes</td>
+</tr>
+<tr>
+<td style="padding: 12px 0;">Secure Cloud Sync</td>
+<td class="status-no">No</td>
+<td class="status-yes">Yes</td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<!-- S14/S15: DEEP DIVE ON PINS & SHREDDING -->
+<section class="container" id="pin-management">
+<span class="label">Advanced Security</span>
+<h2>How to Safely Store Your Credit Bureau PINs and Shred Digital Footprints</h2>
+<p>When you place a freeze or a lock on your credit profile, bureaus often issue a unique, highly sensitive recovery PIN. Losing this PIN turns a simple unlock request into a weeks-long bureaucratic nightmare requiring mailed utility bills and physical identification. Storing these PINs on a sticky note, a draft email, or an unencrypted notepad app is a massive security risk.</p>
+<div class="pro-con-grid">
+<div class="pro-box" style="background: #fff; border: 1px solid var(--color-border);">
+<h3 style="margin-top:0;">Encrypted Wallets &amp; Notes</h3>
+<p>Instead of relying on easily compromised browser <a href="https://www.softwareworld.co/password-management-software/" rel="noopener noreferrer" target="_blank">password managers</a>, we recommend using the dedicated <strong>Secure Wallets</strong> and <strong>Secure Notes</strong> modules inside our recommended tool. These features allow you to build customized digital cards for your banking details and bureau PINs. Because the data is secured locally with <a href="https://psbios.com/file-encryption-explained/" rel="noopener noreferrer" target="_blank">AES-256 bit encryption</a>, a network breach won't expose your recovery codes.</p><div class="media-grid"><figure class="media-card"><img alt="Secure private wallets and secrets stored in an encrypted vault" loading="lazy" src="https://i.ibb.co/hR4dNBWK/Securing-Private-Wallets-Secrets.jpg"/></figure><figure class="media-card"><img alt="Folder Lock password secrets screen for storing bureau PIN recovery codes" loading="lazy" src="https://i.ibb.co/p6wLgTjp/folder-lock-10-screenshot-secrets-passwords.png"/></figure></div>
+</div>
+<div class="pro-box" style="background: #fff; border: 1px solid var(--color-border);">
+<h3 style="margin-top:0;">Eliminating the Traces: File Shredding</h3>
+<p>Downloading your annual credit report creates a vulnerability. If you simply drag the PDF to the Windows Recycle Bin after reviewing it, the data remains on your hard drive and can be effortlessly recovered by data scavenging software. Modern security suites include a <strong>File Shredder</strong> that permanently overwrites the original sectors on your drive, ensuring your financial footprint is eradicated beyond forensic recovery.</p><figure class="media-card"><img alt="Digital tracks and browsing history being erased after reviewing credit reports" loading="lazy" src="https://i.ibb.co/nNF9H8XM/digital-tracks-and-history.jpg"/></figure>
+</div>
+</div>
+</section>
+<!-- S8: COMPARISON TABLE V1 -->
+<section class="container bg-alt" style="padding-top: 64px; padding-bottom: 64px; margin: 48px 0; border-radius: var(--radius-card);">
+<h2 style="text-align: center;">Security Layer Comparison</h2>
+<p style="text-align: center; max-width: 600px; margin: 0 auto 32px;">Understand the difference between securing your identity at the bureau level versus securing your physical files.</p><figure class="media-card"><img alt="Comparison of data security software platforms for identity and local file protection" loading="lazy" src="https://i.ibb.co/k24BgXfS/data-security-software-platforms.png"/></figure>
+<div class="comp-table-wrapper">
+<table class="comp-table">
+<thead>
+<tr>
+<th>Security Method</th>
+<th>Protects Against</th>
+<th>Cost</th>
+<th>Speed to Unlock</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Federal Credit Freeze</strong></td>
+<td>New accounts opened in your name</td>
+<td>Free by law</td>
+<td>24-48 hours</td>
+</tr>
+<tr>
+<td><strong>Bureau Credit Lock</strong> (App)</td>
+<td>New accounts opened in your name</td>
+<td>Often $10-$20/mo</td>
+<td>Instant via app</td>
+</tr>
+<tr class="verdict-row">
+<td><strong>Folder Lock</strong> (Local Files)</td>
+<td>Hackers stealing downloaded bank statements &amp; PDFs</td>
+<td>Free trial available</td>
+<td>Instant via Master Password</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- S16: TROUBLESHOOTING -->
+<section class="container">
+<span class="label">Troubleshooting</span>
+<h2>Owner-Safe Recovery: What If You Get Locked Out?</h2>
+<p>A common issue we see involves users asking questions like "can home credit lock my phone" or dealing with "clamav freshclam log file lock error". We strictly cover credit file and local financial document recovery here.</p><figure class="media-card"><img alt="Shielded monitor showing owner-safe recovery for locked files" loading="lazy" src="https://i.ibb.co/Fbk2d84w/Shielded-Monitor.jpg"/></figure>
+<div class="faq-item" style="margin-top: 32px;">
+<h4>Forgot your Experian PIN to lift a freeze?</h4>
+<p>If you lose the PIN required to lift your credit freeze, do not panic. You can recover access by verifying your identity online through the Experian recovery portal. You will be asked to upload a copy of your government-issued ID and a recent utility bill to prove ownership of the file.</p>
+</div>
+<div class="faq-item">
+<h4>Forgot your Folder Lock master password?</h4>
+<p>Folder Lock uses zero-knowledge architecture. This means the developers do not have your password. If you lose your master password, your encrypted files cannot be accessed. Always keep your master password in a secure, physical safe or a verified offline password manager.</p>
+</div>
+</section>
+<!-- S19: RELATED PRODUCTS FROM NEWSOFTWARES -->
+<section class="container bg-alt" id="related-tools" style="padding: 64px 32px; border-radius: var(--radius-card); margin-top: 64px; margin-bottom: 24px;">
+<span class="label" style="text-align: center;">More Privacy Solutions</span>
+<h2 style="text-align: center;">Other Security Tools You Might Find Useful</h2>
+<p style="text-align: center; max-width: 650px; margin: 0 auto 40px;">These specialized privacy applications are developed by <a href="https://newsoftwares.net/" rel="noopener noreferrer" target="_blank">NewSoftwares.net</a>, the same trusted team behind our top-recommended desktop security suite.</p>
+<div class="pro-con-grid" style="gap: 32px;">
+<div style="background: #fff; padding: 32px; border-radius: var(--radius-card); box-shadow: var(--shadow-card);">
+<h3 style="margin-top:0;">Calculator# (Mobile Vault)</h3>
+<p>A clever mobile privacy tool that disguises itself as a fully functional calculator app on your iOS or Android home screen. Entering your secret mathematical code unlocks a hidden vault where you can securely store sensitive photos, videos, and private audio recordings away from prying eyes.</p><figure class="media-card"><img alt="Mobile app lock and gallery vault for protecting private photos and videos" loading="lazy" src="https://i.ibb.co/dsVdxWNn/app-lock-gallery-vault-01.png"/></figure>
+</div>
+<div style="background: #fff; padding: 32px; border-radius: var(--radius-card); box-shadow: var(--shadow-card);">
+<h3 style="margin-top:0;">File &amp; Password Vault</h3>
+<p>Designed specifically for mobile users who need a centralized, encrypted hub for their credentials. It features a robust password manager, secure media galleries, and a unique "Decoy Mode" that displays a fake, empty vault if you are ever forced to open the app under duress.</p><figure class="media-card"><img alt="File and password vault icon for encrypted mobile credential storage" loading="lazy" src="https://i.ibb.co/S79jSLd0/file-password-vault-icon.png"/></figure>
+</div>
+</div>
+</section>
+<!-- S17: TESTIMONIALS V3 -->
+<section class="container bg-alt" style="padding: 64px 32px; border-radius: var(--radius-card);">
+<h2 style="text-align: center; margin-bottom: 40px;">What Security-Conscious Users Say</h2><figure class="media-card"><img alt="Customer testimonial illustration for personal data protection software" loading="lazy" src="https://i.ibb.co/4wHxLnF3/customer-testimonial-illustration.png"/></figure>
+<div class="test-grid">
+<div class="test-card">
+<p class="test-quote">"After the big data breach, I froze my credit at all three bureaus. But I realized my desktop was full of tax PDFs. Folder Lock gave me peace of mind for the files actually sitting on my computer."</p>
+<div class="test-author">— M. Aris, Privacy Advocate</div>
+</div>
+<div class="test-card">
+<p class="test-quote">"I stopped paying Experian $20 a month for their app lock, switched to a free federal freeze, and used the savings to buy a lifetime license for Folder Lock to secure my local business documents."</p>
+<div class="test-author">— David T., Small Business Owner</div>
+</div>
+</div>
+</section>
+<!-- S20: FAQ V1 -->
+<section class="container" id="faq" style="margin-top: 64px;">
+<span class="label">FAQ</span>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-grid">
+<div class="faq-sidebar">
+<h3>Topics</h3>
+<ul style="list-style: none;">
+<li style="margin-bottom: 12px;"><a href="#faq">Credit Bureau Rules</a></li>
+<li style="margin-bottom: 12px;"><a href="#faq">Impact on Credit Score</a></li>
+<li style="margin-bottom: 12px;"><a href="#faq">Local File Protection</a></li>
+</ul>
+</div>
+<div>
+<details class="faq-item"><summary><h4>How do I lock my credit file?</h4></summary>
+
+<p>You must visit the websites for Equifax, Experian, and TransUnion individually. Create an account on each platform and toggle the "Credit Lock" or "Security Freeze" option to active.</p>
+</details>
+<details class="faq-item"><summary><h4>Does locking my credit file hurt my credit score?</h4></summary>
+
+<p>No. Placing a lock or a freeze on your credit file has absolutely zero impact on your credit score. Your existing creditors will still update your payment history normally.</p>
+</details>
+<details class="faq-item"><summary><h4>Can i lock my experian credit report for free?</h4></summary>
+
+<p>Yes. While Experian pushes a paid "CreditLock" product, you can request a "Security Freeze" through their website at absolutely no cost. By federal law, a freeze is always free.</p>
+</details>
+<details class="faq-item"><summary><h4>Does experian credit lock lock all three bureaus?</h4></summary>
+
+<p>No. Experian, Equifax, and TransUnion are separate competing companies. Locking your file at Experian does not lock the other two. You must lock all three manually.</p>
+</details>
+<details class="faq-item"><summary><h4>How can I find hidden locked files on my PC?</h4></summary>
+
+<p>If you used a tool like Folder Lock to secure your downloaded credit reports locally, open the Folder Lock application and enter your master password. The files are securely hidden from the OS and cannot be found via standard search.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- S22: FINAL CTA -->
+<section class="container" style="text-align: center; margin: 80px auto; max-width: 700px;">
+<h2>The Bottom Line</h2>
+<p>Securing your financial identity is a two-step process. First, freeze or lock your files at Experian, Equifax, and TransUnion to stop new accounts from being opened. Second, ensure that the financial documents sitting on your hard drive—like credit reports, tax returns, and bank statements—are heavily encrypted against local malware or theft.</p><figure class="media-card"><img alt="Protected documents secured after locking credit reports and encrypting files" loading="lazy" src="https://i.ibb.co/Kj8Tw5y3/Protecting-Documents.jpg"/></figure>
+<div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
+<a class="btn btn-outline" href="https://www.newsoftwares.net/download/folderlock10-en/folderlock10-en.exe" rel="noopener noreferrer" target="_blank">Try Folder Lock Free →</a>
+<a class="btn btn-filled" href="https://store.newsoftwares.net/?add=fl10" rel="noopener noreferrer" target="_blank">Get the Full Version →</a>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="container-wide footer-grid">
+<div>
+<div class="nav-logo" style="margin-bottom: 24px; color: #fff;"><span aria-hidden="true" class="brand-mark">
+<svg aria-hidden="true" focusable="false" height="26" role="img" viewbox="0 0 48 48" width="26">
+<path d="M24 4 39 10v11c0 10.7-6.1 18.2-15 23C15.1 39.2 9 31.7 9 21V10L24 4Z" fill="none" stroke="#3FB950" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M17 25l4 4 10-11" fill="none" stroke="#58A6FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</span><span class="brand-text"><span>Credit</span><span>Lock</span><span>Guide</span></span></div>
+<p>Your independent editorial resource for personal data protection, financial identity security, and privacy strategies in 2025.</p>
+</div>
+<div>
+<h4>Explore</h4>
+<ul>
+<li><a href="#guide">How to Lock Your Credit File</a></li>
+<li><a href="#methods">Credit Bureau Guide</a></li>
+<li><a href="#local-files">Secure Local Financial Files</a></li>
+<li><a href="#faq">Frequently Asked Questions</a></li>
+</ul>
+</div>
+<div>
+<h4>Legal &amp; Publisher</h4>
+<ul>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms of Use</a></li>
+</ul>
+<p style="margin-top: 24px; font-size: 0.8rem; color: #666E6A;">
+                    Folder Lock is developed by <a href="https://newsoftwares.net/" rel="noopener noreferrer" target="_blank">NewSoftwares.net</a>.<br/><br/>
+<em>This site operates as an independent editorial resource. Some links may earn a referral commission at no cost to you. Product recommendations reflect editorial judgment and independent assessment.</em>
+</p>
+</div>
+</div>
+<div class="container-wide footer-bottom">
+            © 2026 Credit Lock Guide. All rights reserved.
+        </div>
+</footer>
+<!-- SCHEMA JSON-LD -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Credit Lock Guide",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://example.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "How to Lock Your Credit File — Equifax, Experian, and TransUnion",
+      "description": "Learn how to lock your credit file at Experian, Equifax, and TransUnion."
+    }
+    </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I lock my credit file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You must visit the websites for Equifax, Experian, and TransUnion individually to lock your file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does locking my credit file hurt my credit score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Placing a lock or a freeze on your credit file has absolutely zero impact on your credit score."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can i lock my experian credit report for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can request a Security Freeze through their website at absolutely no cost."
+          }
+        }
+      ]
+    }
+    </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NewSoftwares.net",
+      "url": "https://www.newsoftwares.net"
+    }
+    </script>
+<script defer="">
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            if(hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '68px';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.background = '#0D1117';
+                    navLinks.style.padding = '24px';
+                    navLinks.style.boxShadow = '0 18px 40px rgba(0,0,0,0.35)';
+                });
+            }
+
+            // Header Scroll State
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = 'var(--shadow-card)';
+                } else {
+                    header.style.boxShadow = 'none';
+                }
+            });
+
+        // Terminal hero typing animation
+        const terminalCommands = [
+            {
+                command: '$ protect --file "credit-report.pdf" --mode lock',
+                output: '✓ AES-256 vault ready\n✓ access revoked from unsecured desktop path\n✓ credit-report.pdf protected'
+            },
+            {
+                command: '$ secure --pin "bureau-recovery-codes.txt"',
+                output: '✓ secure note created\n✓ local copy encrypted\n✓ recovery workflow locked'
+            },
+            {
+                command: '$ shred --after-review "annual-credit-report.pdf"',
+                output: '✓ overwrite pass 1 complete\n✓ overwrite pass 2 complete\n✓ unsecured trace removed'
+            }
+        ];
+        const typingTarget = document.getElementById('typing-terminal');
+        let terminalIndex = 0;
+        let typingTimer = null;
+
+        function typeTerminalSequence() {
+            if (!typingTarget) return;
+            const item = terminalCommands[terminalIndex % terminalCommands.length];
+            const fullText = item.command + "\n" + item.output;
+            typingTarget.textContent = "";
+            let charIndex = 0;
+            clearInterval(typingTimer);
+            typingTimer = setInterval(() => {
+                typingTarget.textContent = fullText.slice(0, charIndex++);
+                if (charIndex > fullText.length) {
+                    clearInterval(typingTimer);
+                    terminalIndex++;
+                    setTimeout(typeTerminalSequence, 2600);
+                }
+            }, 26);
+        }
+        typeTerminalSequence();
+
+        // Live files protected counter
+        const filesCounter = document.getElementById('files-protected-counter');
+        let protectedCount = 128400;
+        if (filesCounter) {
+            setInterval(() => {
+                protectedCount += Math.floor(Math.random() * 7) + 1;
+                filesCounter.textContent = protectedCount.toLocaleString();
+            }, 1800);
+        }
+
+        // Scroll-triggered loading bars across section headers
+        const observedHeaders = document.querySelectorAll('section h2');
+        observedHeaders.forEach((heading) => {
+            if (heading.nextElementSibling && heading.nextElementSibling.classList && heading.nextElementSibling.classList.contains('terminal-header-loading')) return;
+            const bar = document.createElement('span');
+            bar.className = 'terminal-header-loading';
+            bar.setAttribute('aria-hidden', 'true');
+            heading.insertAdjacentElement('afterend', bar);
+        });
+        const headerObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const bar = entry.target.nextElementSibling;
+                if (entry.isIntersecting && bar && bar.classList.contains('terminal-header-loading')) {
+                    bar.classList.add('is-loading');
+                    setTimeout(() => bar.classList.add('is-done'), 1150);
+                    headerObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.58 });
+        observedHeaders.forEach((heading) => headerObserver.observe(heading));
+
+        });
+
+        // SIGNATURE E: Inline comparison toggle logic
+        function switchToggle(index) {
+            const btns = document.querySelectorAll('.toggle-btn');
+            const contents = document.querySelectorAll('.toggle-content');
+            
+            btns.forEach(b => b.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            
+            btns[index].classList.add('active');
+            document.getElementById('toggle-' + index).classList.add('active');
+        }
+
+        // Interactive Quiz Logic
+        function showQuizResult(type) {
+            const btns = document.querySelectorAll('.quiz-btn');
+            btns.forEach(b => b.classList.remove('selected'));
+            event.target.classList.add('selected');
+            
+            const resultBox = document.getElementById('quiz-result-box');
+            resultBox.style.display = 'block';
+            
+            if (type === 'high') {
+                resultBox.innerHTML = '<h4 style="color:var(--color-primary-accent)">Recommendation: Federal Credit Freeze</h4><p>Since you rarely apply for credit, a federally protected Free Credit Freeze is best. It provides maximum legal protection, and you only have to thaw it once a year.</p>';
+            } else if (type === 'med') {
+                resultBox.innerHTML = '<h4 style="color:var(--color-primary-accent)">Recommendation: App-Based Credit Lock</h4><p>If you regularly open new accounts or churn credit cards, an app-based credit lock provides the instant on/off convenience you need to approve applications quickly.</p>';
+            } else {
+                resultBox.innerHTML = '<h4 style="color:var(--color-primary-accent)">Recommendation: Leave Unlocked Temporarily</h4><p>Do not lock or freeze your credit while actively in the middle of a mortgage or auto loan underwriting process. Wait until the keys are in your hand, then immediately apply a Freeze.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
